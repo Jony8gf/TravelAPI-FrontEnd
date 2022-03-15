@@ -31,8 +31,8 @@ export default function FormularioAuth(props: formularioAuthProps){
                     {props.type === 'logout' ? <FormGroupText label="Repetir Password" campo="password2" type="password" /> : null }
                     
 
-                    <Button disabled={formikProps.isSubmitting} type="submit">Enviar</Button>
-                    <Link className="btn btn-secondary" to="/">Cancelar</Link>
+                    <Button disabled={formikProps.isSubmitting} type="submit" id="crear-usuario">Enviar</Button>
+                    <Link className="btn btn-secondary my-3" to="/">Cancelar</Link>
                 </Form>
             )}
 

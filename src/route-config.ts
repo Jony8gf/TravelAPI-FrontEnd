@@ -3,9 +3,14 @@ import RedireccionarALanding from './utils/RedireccionarALanding'
 import Registro from "auth/Registro";
 import Login from "auth/Login";
 import IndiceUsuarios from "auth/IndiceUsuarios";
+import CrearTipoActividad from "tipoActividad/CrearTipoActividad";
+import EditarTipoActividad from "tipoActividad/EditarTipoActividad";
+import IndiceTipoActividad from "tipoActividad/IndiceTipoActividad";
 
 const rutas = [
-    
+    {path: '/tipoActividad/crear', componente: CrearTipoActividad, esAdmin: true},
+    {path: '/tipoActividad/editar/:id(\\d+)', componente: EditarTipoActividad, esAdmin: true},
+    {path: '/tipoActividad', componente: IndiceTipoActividad, exact: true, esAdmin: true},
 
     {path: '/usuarios', componente: IndiceUsuarios, esAdmin: true},    
 

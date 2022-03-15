@@ -57,7 +57,7 @@ export default function IndiceEntidad<T>(props: indiceEntidadProps<T>) {
                 : null}
 
             <select
-                className="form-control"
+                className="form-control my-2"
                 onChange={e => {
                     setPagina(1);
                     setRecordsPorPagina(Number(e.currentTarget.value))

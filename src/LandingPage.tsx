@@ -8,8 +8,9 @@ export default function LandingPage() {
 
     return (
         <>
-            
-            <h3>Travel</h3>          
+            <main className="my-5">
+                <h2>Travel</h2>
+            </main>          
             
         </>
     )
