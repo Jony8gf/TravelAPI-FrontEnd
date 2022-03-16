@@ -5,7 +5,7 @@ import Button from "utils/Button";
 import FormGroupText from "utils/FormGroupText";
 import { tipoActividadCreacionDTO } from "./tipoactividad.model";
 
-export default function FormularioGeneros(props: formularioTipoActividadProps){
+export default function FormularioTipoActividad(props: formularioTipoActividadProps){
     return(
         <Formik initialValues={props.modelo}
             onSubmit={props.onSubmit}
@@ -18,10 +18,9 @@ export default function FormularioGeneros(props: formularioTipoActividadProps){
             {(formikProps) => (
                 <Form>
                     <FormGroupText campo="nombre" label="Nombre" />
-
                     <Button disabled={formikProps.isSubmitting} 
                         type="submit">Salvar</Button>
-                    <Link className="btn btn-secondary" to="/tipoActividad">Cancelar</Link>
+                    <Link className="btn btn-secondary" to="/promociones">Cancelar</Link>
                 </Form>
             )}
 

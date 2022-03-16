@@ -19,7 +19,7 @@ interface formGroupTextProps{
     campo: string;
     label?: string;
     placeholder?: string;
-    type: 'text' | 'password';
+    type: 'text' | 'password' | 'number';
 }
 
 FormGroupText.defaultProps = {
