@@ -16,12 +16,22 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 export default function Mapa(props: mapaProps){
     const [coordenadas, setCoordenadas] = useState<coordenadaDTO[]>(props.coordenadas)
+    const [lat, setLat] = useState<number>(0);
+    const [long, setLong] = useState<number>(0);
+
+    navigator.geolocation.getCurrentPosition(function(position) {
+        setLat(position.coords.latitude);
+        setLong(position.coords.longitude);
+      });
+
     return (
+
+        // center={[18.467455, -69.931242]} zoom={14}
         <MapContainer
-            center={[18.467455, -69.931242]} zoom={14}
+            center={[lat, long]} zoom={14}
             style={{height: props.height}}
         >
-            <TileLayer attribution="React Películas"
+            <TileLayer attribution="React Travel"
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             {props.soloLectura ? 

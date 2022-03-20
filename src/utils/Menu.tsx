@@ -38,7 +38,7 @@ export default function Menu() {
                                         className='text-dark'
                                     >
                                         <NavDropdown.Item href="/promociones">Promociones</NavDropdown.Item>
-                                        <NavDropdown.Item href="/viajes">Viajes</NavDropdown.Item>
+                                        <NavDropdown.Item href="/viajes/filtrar">Viajes</NavDropdown.Item>
                                         <NavDropdown.Item href="/tipoActividad">Tipo Actividad</NavDropdown.Item>
                                         <NavDropdown.Divider />
                                         <NavDropdown.Item href="/usuarios">Usuarios</NavDropdown.Item>

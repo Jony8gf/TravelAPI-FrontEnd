@@ -1,6 +1,7 @@
 import { promocionCreacionDTO } from "promociones/promociones.model";
+import { viajeCreacionDTO } from "viajes/viajes.model";
 
-export function convertirPeliculaAFormData(promocion: promocionCreacionDTO): FormData{
+export function convertirPromocionAFormData(promocion: promocionCreacionDTO): FormData{
     
     const formData = new FormData();
     console.log(formData);
@@ -17,6 +18,37 @@ export function convertirPeliculaAFormData(promocion: promocionCreacionDTO): For
         formData.append('fechaHasta', formatearFecha(promocion.fechaHasta));
     }
     
+    return formData;
+}
+
+
+export function convertirViajeAFormData(viaje: viajeCreacionDTO): FormData{
+    
+    const formData = new FormData();
+    formData.append('pais', viaje.pais);
+    formData.append('lugar', viaje.lugar);
+    formData.append('precio', viaje.precio.toString());
+
+    if(viaje.descripcion){
+        formData.append('descripcion', viaje.descripcion);
+    }
+
+    if(viaje.foto){
+        formData.append('foto', viaje.foto);
+    }
+
+    if(viaje.latitud){
+        formData.append('latitud', viaje.latitud.toString());
+    }
+
+    if(viaje.longitud){
+        formData.append('longitud', viaje.longitud.toString());
+    }
+
+
+    formData.append("promocionesIds", JSON.stringify(viaje.promocionesIds));
+    formData.append("tipoActividadesIds", JSON.stringify(viaje.tipoActividadesIds));
+
     return formData;
 }
 
