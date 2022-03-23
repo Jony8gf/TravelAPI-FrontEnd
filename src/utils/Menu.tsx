@@ -24,8 +24,9 @@ export default function Menu() {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link href="#action1">Sobre nosotros</Nav.Link>
-                        <Nav.Link href="#action2">Ofertas</Nav.Link>
+                        <Nav.Link href="#sobrenosotros">Sobre nosotros</Nav.Link>
+                        <Nav.Link href="#viajes">Viajes</Nav.Link>
+                        <Nav.Link href="#ofertas">Ofertas</Nav.Link>
                         <Autorizado
                                 role='admin'
                                 autorizado={

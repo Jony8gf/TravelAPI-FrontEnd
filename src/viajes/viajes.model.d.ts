@@ -36,3 +36,15 @@ export interface viajePutGetDTO{
     tipoActividadesSeleccionados: tipoActividadDTO[];
     tipoActividadesNoSeleccionados: tipoActividadDTO[];
 }
+
+export interface viajeDescuentoDTO{
+    id: number;
+    pais: string;
+    lugar: string;
+    descripcion: string;
+    foto: string;
+    precio: number;
+    precioDescuento: number;
+    latitud?: number;
+    longitud?: number;
+}

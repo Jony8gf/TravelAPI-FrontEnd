@@ -94,7 +94,7 @@ export default function FiltroViajes() {
             queryStrings.push(`promocionId=${valores.promocionId}`)
         }
 
-        if(valores.tipoActividadId){
+        if(valores.tipoActividadId !== 0){
             queryStrings.push(`tipoActividadId=${valores.tipoActividadId}`)
         }
 

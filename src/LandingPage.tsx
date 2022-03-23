@@ -1,6 +1,8 @@
-import { useState, useEffect } from "react";
-import axios, { AxiosResponse } from "axios";
-import AlertaConext from "utils/AlertaConext";
+import Footer from "index/footer";
+import Jumbotron from "index/jumbotron";
+import OfertasIndex from "index/ofertasIndex";
+import SobreNosotros from "index/sobrenosotros";
+import ViajesIndex from "index/viajesIndex";
 
 
 export default function LandingPage() {
@@ -8,10 +10,11 @@ export default function LandingPage() {
 
     return (
         <>
-            <main className="my-5">
-                <h2>Travel</h2>
-            </main>          
-            
+            <Jumbotron />
+            <SobreNosotros />      
+            <ViajesIndex />
+            <OfertasIndex />
+            <Footer />
         </>
     )
 }

@@ -34,11 +34,17 @@ export default function Mapa(props: mapaProps){
             <TileLayer attribution="React Travel"
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            {props.soloLectura ? 
+            
                 <ClickMapa setPunto={coordenadas => {
                     setCoordenadas([coordenadas]);
                     props.manejarClickMapa(coordenadas);
-                }} /> : null}
+                }} />
+
+{/* {props.soloLectura ? 
+                <ClickMapa setPunto={coordenadas => {
+                    setCoordenadas([coordenadas]);
+                    props.manejarClickMapa(coordenadas);
+                }} /> : null} */}
             
             {coordenadas.map(coordenada => <Marcador key={coordenada.lat + coordenada.lng} 
               {...coordenada}
